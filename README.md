@@ -127,16 +127,6 @@ Current support device items:
 	`int geMode()` 0 = "飯前", 1 = "飯前", 2 = "飯後", 3 = "品管"
 	
 	`int getGlucose()`
-	
-	- FORA_P60 (FORA P60(TD-3128B)血壓機)
-	
-	`String getDataTime()`
-	
-	`int getSys()`
-	
-	`int getDia()`
-	
-	`int getPulse()`
 
 	- FORA_IR40 (FORA IR40(TD-1241)額溫機)
 	
