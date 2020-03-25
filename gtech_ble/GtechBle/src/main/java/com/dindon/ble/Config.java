@@ -12,6 +12,7 @@ public class Config {
     public static final Integer FORA_IR40 = 0x04;
     public static final Integer FORA_GD40 = 0x05;
     public static final Integer FORA_W310 = 0x06;
+    public static final Integer FORA_P80 = 0x07;
     public static final Integer WP = 0x11;
     public static final Integer WC = 0x12;
     public static final Integer MITEMP = 0x21;
