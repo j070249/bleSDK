@@ -3,6 +3,19 @@ package com.dindon.gtech_ble;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.LocaleList;
+
+
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
+import java.util.Locale;
 
 import com.dindon.ble.GtechBle;
 import com.dindon.ble.GtechException;
@@ -77,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
             }
             if (device instanceof FORA_IR40) {
                 FORA_IR40 fora_ir40 = ((FORA_IR40) device);
+                TextView fieldsuggest = (TextView)findViewById(R.id.textView);
+                String stringValue = Double.toString(fora_ir40.getObjectTemperature()/10.0);
+                fieldsuggest.setText(stringValue);
+                fieldsuggest.setTextSize(28.0f);
+                fieldsuggest.setTextColor(0xFFFF0000);
                 Log.d(TAG, String.format("%s => ObjectTemperature = %d, AmbientTemperature = %d", fora_ir40.getDataTime(), fora_ir40.getObjectTemperature(), fora_ir40.getAmbientTemperature()));
             }
             if (device instanceof FORA_P80) {
