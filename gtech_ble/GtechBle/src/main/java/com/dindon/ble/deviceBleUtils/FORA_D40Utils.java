@@ -48,6 +48,9 @@ public class FORA_D40Utils {
                     @Override
                     public void onCharacteristicChanged(byte[] data) {
                         int[] ints = new int[8];
+                        if (data[0] == 0x01)
+                            return;
+
                         for (int i = 0; i < data.length; i++) {
                             ints[i] = data[i] & 0xff;
                         }
